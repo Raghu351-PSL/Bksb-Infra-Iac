@@ -7,7 +7,7 @@ variable "region" {
 variable "vpc_cidr" {
   description = "The CIDR block for the VPC"
   type        = string
-  default     = "10.20.0.0/16"
+  default     = "10.1.0.0/16"
 }
 
 variable "vpc_name" {
@@ -19,9 +19,8 @@ variable "vpc_name" {
 variable "subnet_cidrs" {
   description = "A list of CIDR blocks for the subnets"
   type        = list(string)
-  default     = ["10.20.0.0/19", "10.20.32.0/19", "10.20.64.0/19", "10.20.96.0/19", "10.20.128.0/19", "10.20.160.0/19", "10.20.192.0/19"]
+  default     = ["10.1.1.0/24", "10.1.2.0/24", "10.1.3.0/24", "10.1.4.0/24", "10.1.5.0/24", "10.1.6.0/24", "10.1.7.0/24"]
 }
-
 variable "subnet_names" {
   description = "A list of names for the subnets"
   type        = list(string)
@@ -38,3 +37,5 @@ variable "instance_profile_name"{
     description = "instance profile name"
     default     = "IAC-Terraform"
 }
+
+ 

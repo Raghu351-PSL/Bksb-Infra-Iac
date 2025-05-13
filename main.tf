@@ -5,7 +5,7 @@ provider "aws" {
 data "aws_iam_role" "IAM_role" {
   name = "IAC-Terraform" 
 }
- 
+
 
 resource "aws_vpc" "main-vpc" {
   cidr_block = var.vpc_cidr
@@ -13,7 +13,6 @@ resource "aws_vpc" "main-vpc" {
     Name = var.vpc_name
   }
 }
-
 resource "aws_subnet" "subnet" {
   count           = length(var.subnet_cidrs)
   vpc_id          = aws_vpc.main-vpc.id
@@ -23,3 +22,5 @@ resource "aws_subnet" "subnet" {
     Name = "${var.subnet_names[count.index]}"
   }
 }
+
+ 
