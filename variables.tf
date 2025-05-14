@@ -13,7 +13,7 @@ variable "vpc_cidr" {
 variable "vpc_name" {
   description = "The name of the VPC"
   type        = string
-  default     = "main-vpc"
+  default     = "Education-BKSB-staging-ap-southeast-2"
 }
 
 variable "subnet_cidrs" {
